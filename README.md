@@ -21,6 +21,7 @@ The following ros packages are required:
 - [ndt_omp](https://github.com/bo2-mw3/ndtomp)
 - [fast_gicp](https://github.com/SMRT-AIST/fast_gicp)
 - [hdl_global_localization](https://github.com/koide3/hdl_global_localization)
+- [point_cloud_converter](https://github.com/bo2-mw3/pcc)
 
 ## Installation
 
@@ -30,6 +31,7 @@ git clone https://github.com/bo2-mw3/ndtomp
 git clone https://github.com/SMRT-AIST/fast_gicp --recursive
 git clone https://github.com/koide3/hdl_localization
 git clone https://github.com/koide3/hdl_global_localization
+git clone https://github.com/bo2-mw3/pcc
 
 cd /your/catkin_ws
 catkin_make -DCMAKE_BUILD_TYPE=Release
