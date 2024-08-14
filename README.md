@@ -63,7 +63,8 @@ xhost +local:docker
 After that, make your own container with the command below.
 
 ```
-nvidia-docker run --privileged -it \
+docker run --privileged -it \
+           --gpus all \
            -e NVIDIA_DRIVER_CAPABILITIES=all \
            -e NVIDIA_VISIBLE_DEVICES=all \
            --volume=/tmp/.X11-unix:/tmp/.X11-unix:rw \
