@@ -39,6 +39,15 @@ catkin_make -DCMAKE_BUILD_TYPE=Release
 # if you want to enable CUDA-accelerated NDT
 # catkin_make -DCMAKE_BUILD_TYPE=Release -DBUILD_VGICP_CUDA=ON
 ```
+## Docker
+
+# docker
+cd /your/catkin_ws/src/test/docker
+docker build -t hdl_localization .
+docker images
+
+
+
 
 ### Support docker :whale:  
 
