@@ -124,6 +124,20 @@ cd src/hdl_localization/rviz
 rviz -d hdl_localization.rviz
 ```
 
+Open another terminal and enter the docker container.  
+```
+docker exec -it -w /root/catkin_ws/ hdl_localization /bin/bash
+```
+Set up the environment on another terminal.  
+```
+source /opt/ros/melodic/setup.bash
+```
+```
+source devel/setup.bash
+roslaunch point_cloud_converter point_cloud_converter.launch
+```
+
+
 Run the sample bag file at the last local terminal.  
 ```
 rosbag play hdl_400.bag  
