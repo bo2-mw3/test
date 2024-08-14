@@ -41,10 +41,11 @@ catkin_make -DCMAKE_BUILD_TYPE=Release
 ```
 ## Docker
 
-# docker
+```
 cd /your/catkin_ws/src/test/docker
 docker build -t hdl_localization .
 docker images
+```
 
 
 
