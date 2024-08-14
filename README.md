@@ -31,7 +31,7 @@ git clone https://github.com/bo2-mw3/ndtomp
 git clone https://github.com/SMRT-AIST/fast_gicp --recursive
 git clone https://github.com/koide3/hdl_localization
 git clone https://github.com/koide3/hdl_global_localization
-git clone https://github.com/bo2-mw3/pcc
+git clone https://github.com/bo2-mw3/point_cloud_converter
 
 cd /your/catkin_ws
 catkin_make -DCMAKE_BUILD_TYPE=Release
