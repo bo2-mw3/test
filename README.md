@@ -192,6 +192,16 @@ rosbag play --clock hdl_400.bag
 rosservice call /relocalize
 ```
 
+
+## evaluation
+```
+rostopic echo /odom | awk '
+  /secs:/ {s=$2} 
+  /nsecs:/ {ns=$2} 
+  /position:/{getline; tx=$2; getline; ty=$2; getline; tz=$2} 
+  /orientation:/{getline; qx=$2; getline; qy=$2; getline; qz=$2; getline; qw=$2; 
+  print s+ns*1e-9, tx, ty, tz, qx, qy, qz, qw}' > odom_data.txt
+```
 <img src="data/figs/localization1.png" height="256pix" /> <img src="data/figs/localization2.png" height="256pix" />
 
 If it doesn't work well or the CPU usage is too high, change *ndt_neighbor_search_method* in *hdl_localization.launch* to "DIRECT1". It makes the scan matching significantly fast, but a bit unstable.
