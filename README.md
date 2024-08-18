@@ -195,7 +195,7 @@ rosservice call /relocalize
 
 ## evaluation
 ```
-rostopic echo /odom | awk '
+rostopic echo /odom | awk -v OFMT="%.12e" '
   /secs:/ {s=$2} 
   /nsecs:/ {ns=$2} 
   /position:/{getline; tx=$2; getline; ty=$2; getline; tz=$2} 
